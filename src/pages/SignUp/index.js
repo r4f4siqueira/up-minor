@@ -1,16 +1,20 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/UProtocol1.png";
+import { AuthContext } from "../../contexts/auth";
 
 function SignUp() {
     const [nome, setNome] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [password2, setPassword2] = useState("");
+    const { signUp, loadingAuth } = useContext(AuthContext);
 
     function handleSubmit(e) {
         e.preventDefault();
-        alert(`Nome: ${nome}\nEmail : ${email}\nSenha: ${password}\nSenha2: ${password2}`);
+        if (nome !== "" && email !== "" && password !== "") {
+            signUp(email, password, nome); //passar os parametros na mesma ordem que a funcao que foi declarada no arquivo auth na pasta contexts
+        }
     }
 
     return (
@@ -30,7 +34,7 @@ function SignUp() {
                     <label>Repita a Senha:</label>
                     <input type="password" placeholder="******" value={password2} onChange={(e) => setPassword2(e.target.value)} />
                     <button className="entrar" type="submit">
-                        Criar Conta
+                        {loadingAuth ? "Carregando..." : "Criar Conta"}
                     </button>
                 </form>
                 <div className="bottom">

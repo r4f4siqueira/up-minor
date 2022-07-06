@@ -17,7 +17,7 @@ export default function RouteWrapper({ component: Component, isPrivate, ...rest 
     }
 
     if (signed && !isPrivate) {
-        return <Redirect to="/dashboard" />;
+        return <Redirect to="/protocolos" />;
     }
     return <Route {...rest} render={(props) => <Component {...props} />} />;
 }

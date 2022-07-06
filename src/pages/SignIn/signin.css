@@ -122,3 +122,10 @@ a:hover {
     color: #3ca566;
     text-decoration: underline;
 }
+
+.erroSenha {
+    color: #e85b5b;
+}
+.erroSenha:hover {
+    color: #e85b5b;
+}
