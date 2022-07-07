@@ -9,6 +9,7 @@ import Concluidos from "../pages/Concluidos";
 import Clientes from "../pages/Clientes";
 import Funcionarios from "../pages/Funcionarios";
 import Setores from "../pages/Setores";
+import Perfil from "../pages/Perfil";
 
 export default function Rotas() {
     return (
@@ -16,6 +17,7 @@ export default function Rotas() {
             <Route exact path="/" component={SignIn} />
             <Route exact path="/register" component={SignUp} />
 
+            <Route exact path="/perfil" component={Perfil} isPrivate />
             <Route exact path="/protocolos" component={Protocolos} isPrivate />
             <Route exact path="/fila" component={Fila} isPrivate />
             <Route exact path="/concluidos" component={Concluidos} isPrivate />

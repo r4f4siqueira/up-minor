@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+.barraPesquisa {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    width: 100%;
+    height: 124px;
+}
+
+.filtros {
+    border: solid 5px #1498d5;
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+    width: 60%;
+}
+
+.divSeletor select {
+    border: none;
+    font: 14px "Roboto", sans-serif;
+    background-color: #d9d9d9;
+    color: #8e8e8e;
+    border-radius: 4px;
+    margin-left: 4px;
+    margin-right: 4px;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.divSeletor select:hover {
+    cursor: pointer;
+    background-color: #82d7ea;
+    color: #666666;
+}
+
+.divInput input {
+    border: none;
+    background-color: #d9d9d9;
+    border-left: solid 1px #8e8e8e;
+    border-bottom: solid 1px #8e8e8e;
+    height: 25px;
+    width: 38vw;
+    padding-left: 5px;
+    color: #666666;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    margin-right: 4px;
+    transition: all 0.3s;
+}
+
+.divInput input::placeholder {
+    color: #b4b4b4;
+}
+
+.divInput input:hover {
+    box-shadow: none;
+    border-bottom: solid 1px transparent;
+    border-left: solid 1px #8e8e8e;
+    border-bottom: solid 1px #8e8e8e;
+    background-color: #82d7ea;
+    border-radius: 4px;
+}
+
+.divBtPesquisa svg {
+    color: #666666;
+    margin-right: 8px;
+    border: solid 1px transparent;
+    transition: all 0.3s;
+}
+
+.divBtPesquisa svg:hover {
+    cursor: pointer;
+    border-radius: 4px;
+    color: #1498d5;
+    transform: translateX(4px);
+}
+
+.divBtNovo {
+    border: solid 5px #1498d5;
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+    width: 56px;
+    transition: all 0.3s;
+    color: #666666;
+    margin-left: 1px;
+    margin-right: 11vw;
+}
+
+.divBtNovo:hover {
+    cursor: pointer;
+    background-color: #3ca566;
+    transform: translateX(4px);
+}
+
+@media screen and (max-width: 600px) {
+    .filtros {
+        width: 90vw;
+    }
+
+    .divInput input {
+        width: 40vw;
+    }
+
+    .divBtNovo {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .divBtNovo {
+        margin-right: 0;
+    }
+}

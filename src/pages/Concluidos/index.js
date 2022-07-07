@@ -1,6 +1,7 @@
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../../contexts/auth";
 import Header from "../../Components/Header";
+import BarraPesquisa from "../../Components/BarraPesquisa";
 
 export default function Concluidos() {
     const { signOut, telaAtiva } = useContext(AuthContext);
@@ -11,8 +12,11 @@ export default function Concluidos() {
     return (
         <div>
             <Header></Header>
-            <h1>Concluidos !!!!</h1>
-            <button onClick={() => signOut()}>SAIR</button>
+            <div>
+                <BarraPesquisa></BarraPesquisa>
+                <h1>Concluidos !!!!</h1>
+                <button onClick={() => signOut()}>SAIR</button>
+            </div>
         </div>
     );
 }
