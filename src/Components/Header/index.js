@@ -3,7 +3,7 @@ import { AuthContext } from "../../contexts/auth";
 import { useContext } from "react";
 import avatar from "../../assets/teste.jpg";
 import { Link } from "react-router-dom";
-import { FiAlignJustify, FiAlertTriangle, FiCheckSquare, FiUsers, FiSmile, FiGrid, FiCornerLeftUp, FiArrowLeft } from "react-icons/fi";
+import { FiAlignJustify, FiAlertTriangle, FiCheckSquare, FiUsers, FiSmile, FiGrid, FiCornerLeftUp, FiPower } from "react-icons/fi";
 
 export default function Header() {
     const { user, tela, signOut } = useContext(AuthContext);
@@ -53,8 +53,8 @@ export default function Header() {
                 </Link>
             </div>
             <div className="divBtSair">
-                <button className="btSair">
-                    <FiArrowLeft size={24} onClick={() => signOut()} />
+                <button className="btSair" onClick={()=>signOut()}>
+                    <FiPower size={24}  />
                     <span>SAIR</span>
                 </button>
             </div>

@@ -1,0 +1,24 @@
+.componente-titulo{
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: larger;
+    color: #1498d5;
+    border-bottom: solid 5px #1498d5;
+    margin-left: 200px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+@media screen and (max-width: 600px) {
+    .componente-titulo{
+        margin: 0;
+        border-bottom: solid 5px #1498d5;
+        border-top: solid 1px #1498d5;
+        font-size: 12px;
+        height: auto;
+        padding: 0;
+    }
+}

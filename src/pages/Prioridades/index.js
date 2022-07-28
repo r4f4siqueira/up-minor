@@ -1,6 +1,7 @@
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../../contexts/auth";
 import Header from "../../Components/Header";
+import Title from "../../Components/Title";
 
 export default function Prioridades() {
     const { signOut, telaAtiva } = useContext(AuthContext);
@@ -10,7 +11,8 @@ export default function Prioridades() {
     });
     return (
         <div>
-            <Header></Header>
+            <Header/>
+            <Title titulo="Cadastro de Prioridade"/>
             <h1>Prioridades</h1>
             <button onClick={() => signOut()}>SAIR</button>
         </div>

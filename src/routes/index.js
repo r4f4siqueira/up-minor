@@ -10,6 +10,7 @@ import Clientes from "../pages/Clientes";
 import Funcionarios from "../pages/Funcionarios";
 import Setores from "../pages/Setores";
 import Perfil from "../pages/Perfil";
+import CadastroCliente from "../pages/Clientes/CadastroCliente";
 
 export default function Rotas() {
     return (
@@ -21,7 +22,10 @@ export default function Rotas() {
             <Route exact path="/protocolos" component={Protocolos} isPrivate />
             <Route exact path="/fila" component={Fila} isPrivate />
             <Route exact path="/concluidos" component={Concluidos} isPrivate />
+            
             <Route exact path="/clientes" component={Clientes} isPrivate />
+            <Route exact path="/clientes/cadastro" component={CadastroCliente} isPrivate />
+                        
             <Route exact path="/funcionarios" component={Funcionarios} isPrivate />
             <Route exact path="/setores" component={Setores} isPrivate />
             <Route exact path="/prioridades" component={Prioridades} isPrivate />

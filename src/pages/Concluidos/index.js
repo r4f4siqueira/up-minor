@@ -2,6 +2,7 @@ import { useContext, useEffect } from "react";
 import { AuthContext } from "../../contexts/auth";
 import Header from "../../Components/Header";
 import BarraPesquisa from "../../Components/BarraPesquisa";
+import Title from "../../Components/Title";
 
 export default function Concluidos() {
     const { signOut, telaAtiva } = useContext(AuthContext);
@@ -11,7 +12,8 @@ export default function Concluidos() {
     });
     return (
         <div>
-            <Header></Header>
+            <Header/>
+            <Title titulo="Protocolos Concluídos"/>
             <div>
                 <BarraPesquisa></BarraPesquisa>
                 <h1>Concluidos !!!!</h1>

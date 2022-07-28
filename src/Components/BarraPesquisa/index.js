@@ -1,7 +1,8 @@
 import "./barrapesquisa.css";
 import { FiPlus, FiSearch } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
-export default function BarraPesquisa() {
+export default function BarraPesquisa({adicionar}) {
     return (
         <div className="barraPesquisa">
             <form className="filtros">
@@ -18,9 +19,11 @@ export default function BarraPesquisa() {
                     <FiSearch size={32}></FiSearch>
                 </div>
             </form>
-            <div className="divBtNovo">
-                <FiPlus size={24}></FiPlus>
-            </div>
+            <Link to={adicionar} className="linkBtNovo">
+                <div>
+                    <FiPlus size={24}></FiPlus>
+                </div>
+            </Link>
         </div>
     );
 }

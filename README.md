@@ -20,6 +20,7 @@ $ npm start
 #1498d5 - bordas
 #d9d9d9 - background input
 #b4b4b4 - texto placeholder
+#a8a8a8 - background containers
 ```
 
 ## Hover/Efeitos

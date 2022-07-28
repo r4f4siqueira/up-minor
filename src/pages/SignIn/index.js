@@ -7,13 +7,17 @@ import { AuthContext } from "../../contexts/auth";
 function SignIn() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const { signIn, loadingAuth, erro } = useContext(AuthContext);
+    const { signIn, loadingAuth, erro, redefinirSenha,loginGoogle } = useContext(AuthContext);
 
     function handleSubmit(e) {
         e.preventDefault();
         if (email !== "" && password !== "") {
             signIn(email, password);
         }
+    }
+
+    function esqueciSenha(){
+        redefinirSenha(email)
     }
 
     return (
@@ -32,11 +36,11 @@ function SignIn() {
                         {loadingAuth ? "Carregando..." : "Entrar"}
                     </button>
                 </form>
-                <a className="erroSenha" href="http://www.google.com">
+                <a className="erroSenha" onClick={()=> esqueciSenha()}>
                     {erro ? "Esqueci a senha" : ""}
                 </a>
                 <div className="bottom">
-                    <button className="google">Entrar com o Google</button>
+                    <button className="google" onClick={loginGoogle}>Entrar com o Google</button>
                     <Link to="/register">Cadastrar-se</Link>
                 </div>
             </div>

@@ -63,7 +63,7 @@
     border-bottom: solid 1px transparent;
     border-left: solid 1px #8e8e8e;
     border-bottom: solid 1px #8e8e8e;
-    background-color: #82d7ea;
+    
     border-radius: 4px;
 }
 
@@ -81,7 +81,7 @@
     transform: translateX(4px);
 }
 
-.divBtNovo {
+.linkBtNovo {
     border: solid 5px #1498d5;
     background-color: #d9d9d9;
     border-radius: 10px;
@@ -95,10 +95,17 @@
     color: #666666;
     margin-left: 1px;
     margin-right: 11vw;
+    margin-top: 0;
 }
 
-.divBtNovo:hover {
+.linkBtNovo a{
+    color: #666666;
+    transform: none;
+}
+
+.linkBtNovo:hover {
     cursor: pointer;
+    color: #666666;
     background-color: #3ca566;
     transform: translateX(4px);
 }
@@ -108,17 +115,17 @@
         width: 90vw;
     }
 
-    .divInput input {
+    .linkBtNovo input {
         width: 40vw;
     }
 
-    .divBtNovo {
+    .linkBtNovo {
         margin-right: 0;
     }
 }
 
 @media screen and (max-width: 850px) {
-    .divBtNovo {
+    .linkBtNovo {
         margin-right: 0;
     }
 }
